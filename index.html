@@ -15,16 +15,19 @@
 <body>
 
 <!-- Sidebar (hidden by default) -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-animate-left" style="display:none;z-index:3;width:25%; min-width: 300px" id="mySidebar"><br>
+<nav class="w3-sidebar w3-top w3-animate-left" style="display:none;z-index:3;width:14%; min-width: 200px" id="mySidebar">
     <div class="w3-container">
-        <a href="javascript:void(0)" onclick="w3_close()"
-        class="w3-bar-item w3-button">Close Menu</a>
-        <h4><b>Izza My Shop!</b></h4>
-        <p class="w3-text-grey">Maria Paula Parga Nina</p>
-    </div>
-    <div class="w3-bar-block">
-        <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal">Food</a> 
-        <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">ABOUT</a> 
+        <div class="w3-button w3-padding-16 w3-right w3-center" style="font-size:x-large;" onclick="w3_close()">☰</div><br><br><br>
+        <div class="w3-center">
+            <h4><b>Izza My Shop!</b></h4>
+            <p class="w3-text-grey">Maria Paula Parga Nina</p>
+            <img src="https://i.postimg.cc/jdWyNqJB/bw.jpg" style="width:45%;" class="w3-round w3-center"><br><br>
+        </div>
+        <div class="w3-bar-block w3-center">
+            <a href="#items" onclick="w3_close()" class="w3-bar-item w3-button w3-padding" style="font-size: larger">ITEMS</a> 
+            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding" style="font-size: larger">ABOUT</a> 
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding" style="font-size: larger">CONTACT</a> 
+        </div>
     </div>
 </nav>
 
@@ -35,14 +38,15 @@
 <div class="w3-top">
     <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
         <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
-        <div class="w3-center w3-padding-16">My Shop</div>
+        <div class="w3-center w3-padding-16">Izza My Shop!</div>
     </div>
 </div>
   
 <!-- !PAGE CONTENT! -->
 <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:50px">
 
-    <div class="w3-center w3-padding-16">
+    <!-- Filter -->
+    <div class="w3-center w3-padding-16" id="items">
         <div id="myBtnContainer">
             <button class="w3-button w3-black" onclick="filterSelection('all')">ALL</button>
             <button class="w3-button w3-white" onclick="filterSelection('design')"><i class="w3-margin-center"></i>Design</button>
@@ -53,76 +57,77 @@
     </div>
 
     <!-- First Photo Grid-->
-    <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-    <div class="filterDiv watercolor">
-        <div class="w3-quarter">
-            <img src="https://www.w3schools.com/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">
-            <h3>The Perfect Sandwich, A Real NYC Classic</h3>
-            <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-        </div>
-    </div>
+    <div class="w3-row-padding w3-padding-16 w3-center">
 
-    <div class="filterDiv watercolor">
-        <div class="w3-quarter">
-            <img src="https://www.w3schools.com/w3images/steak.jpg" alt="Steak" style="width:100%">
-            <h3>Let Me Tell You About This Steak</h3>
-            <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        <div class="filterDiv watercolor">
+            <div class="w3-quarter">
+                <img src="https://www.w3schools.com/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">
+                <h3>The Perfect Sandwich, A Real NYC Classic</h3>
+                <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
         </div>
-    </div>
 
-    <div class="filterDiv watercolor">
-        <div class="w3-quarter">
-            <img src="https://www.w3schools.com/w3images/cherries.jpg" alt="Cherries" style="width:100%">
-            <h3>Cherries, interrupted</h3>
-            <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-            <p>What else?</p>
+        <div class="filterDiv watercolor">
+            <div class="w3-quarter">
+                <img src="https://www.w3schools.com/w3images/steak.jpg" alt="Steak" style="width:100%">
+                <h3>Let Me Tell You About This Steak</h3>
+                <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
         </div>
-    </div>
 
-    <div class="filterDiv watercolor">
-        <div class="w3-quarter">
-            <img src="https://www.w3schools.com/w3images/wine.jpg" alt="Pasta and Wine" style="width:100%">
-            <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
-            <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        <div class="filterDiv watercolor">
+            <div class="w3-quarter">
+                <img src="https://www.w3schools.com/w3images/cherries.jpg" alt="Cherries" style="width:100%">
+                <h3>Cherries, interrupted</h3>
+                <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                <p>What else?</p>
+            </div>
         </div>
-    </div>
+
+        <div class="filterDiv watercolor">
+            <div class="w3-quarter">
+                <img src="https://www.w3schools.com/w3images/wine.jpg" alt="Pasta and Wine" style="width:100%">
+                <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
+                <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
+        </div>
 
     </div>
   
     <!-- Second Photo Grid-->
     <div class="w3-row-padding w3-padding-16 w3-center">
 
-    <div class="filterDiv ceramics">
-        <div class="w3-quarter">
-            <img src="https://www.w3schools.com/w3images/popsicle.jpg" alt="Popsicle" style="width:100%">
-            <h3>All I Need Is a Popsicle</h3>
-            <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        <div class="filterDiv ceramics">
+            <div class="w3-quarter">
+                <img src="https://www.w3schools.com/w3images/popsicle.jpg" alt="Popsicle" style="width:100%">
+                <h3>All I Need Is a Popsicle</h3>
+                <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
         </div>
-    </div>
 
-    <div class="filterDiv ceramics">
-        <div class="w3-quarter">
-            <img src="https://www.w3schools.com/w3images/salmon.jpg" alt="Salmon" style="width:100%">
-            <h3>Salmon For Your Skin</h3>
-            <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        <div class="filterDiv ceramics">
+            <div class="w3-quarter">
+                <img src="https://www.w3schools.com/w3images/salmon.jpg" alt="Salmon" style="width:100%">
+                <h3>Salmon For Your Skin</h3>
+                <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
         </div>
-    </div>
 
-    <div class="filterDiv ceramics">
-        <div class="w3-quarter">
-            <img src="https://www.w3schools.com/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">
-            <h3>The Perfect Sandwich, A Real Classic</h3>
-            <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        <div class="filterDiv ceramics">
+            <div class="w3-quarter">
+                <img src="https://www.w3schools.com/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">
+                <h3>The Perfect Sandwich, A Real Classic</h3>
+                <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
         </div>
-    </div>
 
-    <div class="filterDiv ceramics">
-        <div class="w3-quarter">
-            <img src="https://www.w3schools.com/w3images/croissant.jpg" alt="Croissant" style="width:100%">
-            <h3>Le French</h3>
-            <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+        <div class="filterDiv ceramics">
+            <div class="w3-quarter">
+                <img src="https://www.w3schools.com/w3images/croissant.jpg" alt="Croissant" style="width:100%">
+                <h3>Le French</h3>
+                <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
         </div>
-    </div>
 
     </div>
   
@@ -138,43 +143,14 @@
             <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
         </div>
     </div>
-  <hr>
-  
-  <!-- Footer -->
-    <footer class="w3-row-padding w3-padding-32">
-    <div class="w3-third">
-      <h3>FOOTER</h3>
-      <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      <p>Made with <a href="https://www.w3schools.com/spaces" target="_blank">W3Schools Spaces</a></p>
-    </div>
-  
-    <div class="w3-third">
-      <h3>BLOG POSTS</h3>
-      <ul class="w3-ul w3-hoverable">
-        <li class="w3-padding-16">
-          <img src="https://www.w3schools.com/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
-          <span class="w3-large">Lorem</span><br>
-          <span>Sed mattis nunc</span>
-        </li>
-        <li class="w3-padding-16">
-          <img src="https://www.w3schools.com/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
-          <span class="w3-large">Ipsum</span><br>
-          <span>Praes tinci sed</span>
-        </li> 
-      </ul>
-    </div>
 
-    <div class="w3-third w3-serif">
-      <h3>POPULAR TAGS</h3>
-      <p>
-        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">France</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dressing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Duck</span>
-      </p>
+  <hr id="contact">
+
+  <!-- Contact Section -->
+    <div class="w3-container w3-padding-32 w3-center">  
+        <h3>Contact info</h3><br>
     </div>
-    </footer>
+  <hr>
 
 <!-- End page content -->
 </div>
